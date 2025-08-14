@@ -9,4 +9,6 @@ const DestinationSchema = new mongoose.Schema({
   videoUrl: String, // Cloudinary video URL
 }, { timestamps: true });
 
+
+
 module.exports = mongoose.model('Destination', DestinationSchema);
