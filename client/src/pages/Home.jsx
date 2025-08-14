@@ -5,10 +5,14 @@ const Home = () => {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
-    getDestinations()
-      .then(res => setDestinations(res.data))
-      .catch(err => console.error(err));
-  }, []);
+  getDestinations()
+    .then(res => {
+      console.log("API Response:", res);
+      setDestinations(res.data); 
+    })
+    .catch(err => console.error("Error fetching destinations:", err));
+}, []);
+
 
   return (
     <div className="p-4">
